@@ -1,0 +1,9 @@
+[submodule "reader"]
+	path = reader
+	url = git@github.com:CodingAvenue/ca-school-reader.git
+[submodule "renderer"]
+	path = renderer
+	url = git@github.com:CodingAvenue/ca-school-renderer.git
+[submodule "courses/php-introduction"]
+	path = courses/php-introduction
+	url = git@github.com:CodingAvenue/ca-school-php-introduction.git

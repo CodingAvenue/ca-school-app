@@ -18,7 +18,7 @@ The deployed state of ca-school-reader and ca-school-renderer
 #### Running
 
  - `docker run --rm -p 8093:8093 codingavenue/ca-school-app`
- - Visit http://<MACHINE-IP>:8093/courses/php-introduction
+ - Visit http://**MACHINE-IP**:8093/courses/php-introduction
  - MACHINE-IP: ***If you are on linux it's `localhost` else execute `docker-machine ip` to get the IP.***
 
 ## Development

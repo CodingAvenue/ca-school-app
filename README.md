@@ -13,8 +13,8 @@ The deployed state of ca-school-reader and ca-school-renderer
 #### Installation
 
  - `docker-machine create --driver virtualbox default`
-	- `docker-machine start`
-	- `eval $(docker-machine env --shell bash)`
+ - `docker-machine start`
+ - `eval $(docker-machine env --shell bash)`
  - `docker login`
  - `docker pull codingavenue/ca-school-app`
 

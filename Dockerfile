@@ -1,9 +1,5 @@
 FROM node:7.0
 
-RUN apt-get -y update && apt-get install -y supervisor
-
-COPY supervisord.conf /tmp/supervisord.conf
-
 # Install renderer
 RUN mkdir -p /var/www/renderer
 COPY renderer/package.json /var/www/renderer
@@ -27,8 +23,6 @@ WORKDIR /var/www/reader
 RUN npm install
 
 COPY reader ./
-
-RUN npm run build
 
 EXPOSE 8093
 

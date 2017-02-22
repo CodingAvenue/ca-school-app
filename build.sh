@@ -12,9 +12,4 @@ if [[ "$NON_NIX" == 1 ]]; then
 	eval $(docker-machine env --shell bash)
 fi
 
-docker build -t codingavenue/app .
-
-docker run -p 8093:8093 --rm codingavenue/app
-
-docker stop $(docker ps -a -q)
-docker rm $(docker ps -a -q)
+docker-compose up

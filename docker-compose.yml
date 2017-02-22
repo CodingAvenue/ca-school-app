@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+    renderer:
+        build: renderer
+        volumes:
+            - ./courses:/tmp/courses-raw
+            - data-volume:/tmp/courses-rendered
+    reader:
+        build: reader
+        environment:
+            - NODE_ENV=production
+        volumes:
+            - data-volume:/tmp/courses-rendered
+        ports:
+            - "8093:8093"
+
+volumes:
+    data-volume:

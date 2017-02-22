@@ -8,7 +8,7 @@
 
 #### Requirements
 
- - [Docker version 1.13.1, build 092cba3](https://www.docker.com/)
+ - [Docker version 1.12.6, build 78d1802](https://www.docker.com/)
  - [docker-compose version 1.11.2, build f963d76f](https://docs.docker.com/compose/install/)
 
 #### Running

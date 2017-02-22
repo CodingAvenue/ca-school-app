@@ -4,6 +4,8 @@
 
 **For testing only** - Preview the build of all components/services as in production.
 
+**DOESN'T CURRENTLY WORK ON WINDOWS**
+
 ## Deploying
 
 #### Requirements

@@ -8,7 +8,6 @@ services:
         volumes:
             - ./courses:/tmp/courses-raw
             - data-volume:/tmp/courses-rendered
-        command: ["npm", "start"]
     reader:
         build: reader
         volumes:

@@ -6,6 +6,7 @@ services:
         environment:
             - NODE_ENV=production
         volumes:
+            - ./courses:/tmp/courses-raw
             - data-volume:/tmp/courses-rendered
     reader:
         build: reader

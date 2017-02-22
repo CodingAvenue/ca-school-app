@@ -8,10 +8,12 @@ services:
             - data-volume:/tmp/courses-rendered
     reader:
         build: reader
-        environment:
-            - NODE_ENV=production
+        depends_on:
+            - renderer
         volumes:
             - data-volume:/tmp/courses-rendered
+        environment:
+            - NODE_ENV=production
         ports:
             - "8093:8093"
 

@@ -4,6 +4,6 @@
 [submodule "renderer"]
 	path = renderer
 	url = git@github.com:CodingAvenue/ca-school-renderer.git
-[submodule "courses/php-introduction"]
-	path = courses/php-introduction
+[submodule "courses/ca-school-php-introduction"]
+	path = courses/ca-school-php-introduction
 	url = git@github.com:CodingAvenue/ca-school-php-introduction.git

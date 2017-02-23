@@ -16,5 +16,5 @@
 #### Running
 
  - `./build.sh`
- - Visit http://**MACHINE-IP**:8093/php-introduction/content/GettingStarted/GettingStarted.q.html
+ - Visit http://**MACHINE-IP**:8093/ca-school-php-introduction/content/GettingStarted/GettingStarted.q.html
  - MACHINE-IP: ***If you are on linux it's `localhost` else execute `docker-machine ip` to get the IP.***

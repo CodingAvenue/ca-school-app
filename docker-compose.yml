@@ -5,6 +5,12 @@ services:
         image: postgres:9.6
     rabbit:
         image: rabbitmq:3.6-management
+    validator:
+        build: validator
+    sandbox:
+        build: sandbox
+        depends_on:
+            - rabbit
     renderer:
         build: renderer
         environment:

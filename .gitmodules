@@ -10,3 +10,6 @@
 [submodule "validator"]
 	path = validator
 	url = git@github.com:CodingAvenue/ca-school-course-validator-rest-api.git
+[submodule "sandbox"]
+	path = sandbox
+	url = git@github.com:CodingAvenue/ca-school-sandbox.git

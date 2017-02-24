@@ -7,3 +7,6 @@
 [submodule "courses/ca-school-php-introduction"]
 	path = courses/ca-school-php-introduction
 	url = git@github.com:CodingAvenue/ca-school-php-introduction.git
+[submodule "validator"]
+	path = validator
+	url = git@github.com:CodingAvenue/ca-school-course-validator-rest-api.git

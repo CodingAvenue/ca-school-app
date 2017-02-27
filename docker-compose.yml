@@ -3,8 +3,17 @@ version: '3'
 services:
     pg:
         image: postgres:9.6
+        ports:
+            - '5432:5432'
     rabbit:
         image: rabbitmq:3.6-management
+        ports:
+            - '15672:15672'
+            - '5672:5672'
+    consul:
+        image: consul:0.7.5
+        ports:
+            - '8500:8500'
     validator:
         build: validator
     sandbox:

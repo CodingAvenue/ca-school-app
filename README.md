@@ -15,6 +15,16 @@
 
 #### Running
 
- - `./build.sh`
+```
+// For mac and windows users
+docker-machine create --driver virtualbox default
+docker-machine start
+eval $(docker-machine env --shell bash)
+
+// all platform
+docker-compose up
+```
+
+
  - Visit http://**MACHINE-IP**:8093/ca-school-php-introduction/content/GettingStarted/GettingStarted.q.html
  - MACHINE-IP: ***If you are on linux it's `localhost` else execute `docker-machine ip` to get the IP.***

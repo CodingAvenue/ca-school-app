@@ -13,3 +13,6 @@
 [submodule "sandbox"]
 	path = sandbox
 	url = git@github.com:CodingAvenue/ca-school-sandbox.git
+[submodule "platform"]
+	path = platform
+	url = git@github.com:CodingAvenue/ca-school-platform.git

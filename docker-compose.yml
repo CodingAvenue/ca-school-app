@@ -1,11 +1,11 @@
 version: '3'
 
 services:
-    pg:
+    database:
         image: postgres:9.6
         ports:
             - '5432:5432'
-    rabbit:
+    queue:
         image: rabbitmq:3.6-management
         ports:
             - '15672:15672'
@@ -19,7 +19,7 @@ services:
     sandbox:
         build: sandbox
         depends_on:
-            - rabbit
+            - queue
             - consul
     renderer:
         build: renderer
@@ -36,6 +36,10 @@ services:
             - NODE_ENV=production
         ports:
             - "8093:8093"
+    platform:
+        build: platform
+        depends_on:
+            - database
 
 volumes:
     data-volume:

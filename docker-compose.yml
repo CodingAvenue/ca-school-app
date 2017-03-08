@@ -38,6 +38,8 @@ services:
             - "8093:8093"
     platform:
         build: platform
+        ports:
+            - "8000:8000"
         depends_on:
             - database
 

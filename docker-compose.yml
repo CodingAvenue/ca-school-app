@@ -15,7 +15,7 @@ services:
         ports:
             - '8500:8500'
     validator:
-        image: codingavenue/ca-school-course-validator:latest
+        image: codingavenue/ca-school-course-validator-rest-api:latest
     sandbox:
         image: codingavenue/ca-school-sandbox:latest
         depends_on:

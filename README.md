@@ -1,10 +1,10 @@
 # ca-school-app
 
-**CLONE recursively** i.e. `git clone --recursive git@github.com:CodingAvenue/ca-school-app.git`
+Use for testing/previewing the overall build of ca-school.
 
-**For testing only** - Preview the build of all components/services as in production.
-
-**DOESN'T CURRENTLY WORK ON WINDOWS**
+**Note:**
+ - **CLONE recursively** i.e. `git clone --recursive git@github.com:CodingAvenue/ca-school-app.git`
+ - **Login to DockerHub from command-line** - `docker login` 
 
 ## Deploying
 
@@ -16,15 +16,14 @@
 #### Running
 
 ```
-// For mac and windows users
+// mac
 docker-machine create --driver virtualbox default
 docker-machine start
 eval $(docker-machine env --shell bash)
 
-// all platform
+// linux & mac
 docker-compose up
 ```
-
 
  - Visit http://**MACHINE-IP**:8093/ca-school-php-introduction/content/GettingStarted/GettingStarted.q.html
  - MACHINE-IP: ***If you are on linux it's `localhost` else execute `docker-machine ip` to get the IP.***

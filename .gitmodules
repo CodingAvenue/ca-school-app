@@ -1,18 +1,6 @@
-[submodule "reader"]
-	path = reader
-	url = git@github.com:CodingAvenue/ca-school-reader.git
 [submodule "renderer"]
 	path = renderer
 	url = git@github.com:CodingAvenue/ca-school-renderer.git
 [submodule "courses/ca-school-php-introduction"]
 	path = courses/ca-school-php-introduction
 	url = git@github.com:CodingAvenue/ca-school-php-introduction.git
-[submodule "validator"]
-	path = validator
-	url = git@github.com:CodingAvenue/ca-school-course-validator-rest-api.git
-[submodule "sandbox"]
-	path = sandbox
-	url = git@github.com:CodingAvenue/ca-school-sandbox.git
-[submodule "platform"]
-	path = platform
-	url = git@github.com:CodingAvenue/ca-school-platform.git

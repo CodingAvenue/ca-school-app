@@ -15,9 +15,9 @@ services:
         ports:
             - '8500:8500'
     validator:
-        build: validator
+        image: codingavenue/ca-school-course-validator:latest
     sandbox:
-        build: sandbox
+        image: codingavenue/ca-school-sandbox:latest
         depends_on:
             - queue
             - consul
@@ -29,7 +29,7 @@ services:
             - ./courses:/tmp/courses-raw
             - data-volume:/tmp/courses-rendered
     reader:
-        build: reader
+        image: codingavenue/ca-school-reader:latest
         volumes:
             - data-volume:/tmp/courses-rendered
         environment:
@@ -37,7 +37,7 @@ services:
         ports:
             - "8093:8093"
     platform:
-        build: platform
+        image: codingavenue/ca-school-platform:latest
         ports:
             - "8000:8000"
         depends_on:

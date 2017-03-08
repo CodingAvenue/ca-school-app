@@ -22,7 +22,7 @@ docker-machine start
 eval $(docker-machine env --shell bash)
 
 // linux & mac
-docker-compose up
+./build.sh
 ```
 
  - Visit http://**MACHINE-IP**:8093/ca-school-php-introduction/content/GettingStarted/GettingStarted.q.html

@@ -1,29 +1,20 @@
 version: '3'
 
 services:
-    database:
-        image: postgres:9.6
-        ports:
-            - '5432:5432'
-    queue:
-        image: rabbitmq:3.6-management
-        ports:
-            - '15672:15672'
-            - '5672:5672'
-    consul:
-        image: consul:0.7.5
-        ports:
-            - '8500:8500'
     validator:
+        container_name: validator
         image: codingavenue/ca-school-course-validator-rest-api:latest
         ports:
             - '8090:8090'
     sandbox:
+        container_name: sandbox
         image: codingavenue/ca-school-sandbox:latest
-        depends_on:
-            - queue
-            - consul
+        ports:
+            - '8092:8092'
+        networks:
+            - app_default
     renderer:
+        container_name: renderer
         build: renderer
         environment:
             - NODE_ENV=production
@@ -31,6 +22,7 @@ services:
             - ./courses:/tmp/courses-raw
             - data-volume:/tmp/courses-rendered
     reader:
+        container_name: reader
         image: codingavenue/ca-school-reader:latest
         volumes:
             - data-volume:/tmp/courses-rendered
@@ -39,11 +31,16 @@ services:
         ports:
             - "8093:8093"
     platform:
+        container_name: platform
         image: codingavenue/ca-school-platform:latest
         ports:
             - "8000:8000"
-        depends_on:
-            - database
+        networks:
+            - app_default
 
 volumes:
     data-volume:
+
+networks:
+    app_default:
+        external: true

@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+    database:
+        container_name: database
+        image: postgres:9.6
+        ports:
+            - '5432:5432'
+    queue:
+        container_name: queue
+        image: rabbitmq:3.6-management
+        ports:
+            - '15672:15672'
+            - '5672:5672'
+    consul:
+        container_name: registry
+        image: consul:0.7.5
+        ports:
+            - '8500:8500'

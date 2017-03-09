@@ -35,6 +35,8 @@ services:
         image: codingavenue/ca-school-platform:latest
         ports:
             - "8000:8000"
+        depends_on:
+            - validator
         networks:
             - app_default
 

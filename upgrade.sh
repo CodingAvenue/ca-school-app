@@ -1,5 +1,10 @@
 #/usr/bin/env bash
 
+docker pull codingavenue/ca-school-sandbox:latest
+docker pull codingavenue/ca-school-platform:latest
+docker pull codingavenue/ca-school-reader:latest
+docker pull codingavenue/ca-school-validator:latest
+
 cd renderer; git pull origin master;
 cd -
 
